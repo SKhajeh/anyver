@@ -60,12 +60,13 @@ Given a version number A.YYYYMM.KK9F9P9B:
 1. A determines age of the project, started from 0 and incremented annualy.
 2. YYYY is the Gregorian year of the last release of the project.
 3. MM is the Gregorian month of the last release of the project.
-4. KK is Kakushin-Kaikaku number. started from 0 and incremented every time a revolutionary change happens in the project.
+4. KK is Kakushin-Kaikaku number. started from 0 and incremented every time a revolutionary change happens in the project(never reset).
 5. The three nines are used as separator.
-6. F is the octal number of functional modifications in the project, reset to zero if the next release is in another **year**.
-7. P is the octal number of performance upgrades in the project, reset to zero if the next release is in another **year**.
-8. B is the octal number of bugfixes of the project, reset to zero if the next release is in another **month**.
-
+6. F is the octal number of functional modifications in the project. Reset to zero if the next release is in another **year**.
+7. P is the octal number of performance upgrades in the project. Reset to zero if the next release is in another **year**.
+8. B is the octal number of bugfixes of the project. Reset to zero if the next release is in another **month**.     
+**quick example**:    
+`0.202403.19090917` is the version number for a project which is in the first first year of development. This release has happened in March,2024. It has had one Kaikaku-Kakushin, 0 performance upgrades and functional modifications and 15(0o17=15, in the last month) bugfixes until this release.
 # Specification
 
 
