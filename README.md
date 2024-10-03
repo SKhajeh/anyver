@@ -54,17 +54,17 @@ One may look on the version of a products iteration in order to know:
    - etc.
 6. Is it in pre-release or post-release phase?
 ---
-Now its the time to mix things and make some cool stuff out of the above ideas.
+Now its the time to mix things up and make some cool stuff out of the above ideas.
 # Summary
 Given a version number A.YYYYMM.KK9F9P9B:
 1. A determines age of the project, started from 0 and incremented annualy.
-2. YYYY is the gregorian year of the last release of the project.
-3. MM is the gregorian month of the last release of the project.
+2. YYYY is the Gregorian year of the last release of the project.
+3. MM is the Gregorian month of the last release of the project.
 4. KK is Kakushin-Kaikaku number. started from 0 and incremented every time a revolutionary change happens in the project.
 5. The three nines are used as separator.
-6. F is the octal number of functional modifications in the project, reset to zero **year**ly.
-7. P is the octal number of performance upgrades in the project, reset to zero **year**ly.
-8. B is the octal number of bugfixes of the project, reset to zero**month**ly.
+6. F is the octal number of functional modifications in the project, reset to zero if the next release is in another **year**.
+7. P is the octal number of performance upgrades in the project, reset to zero if the next release is in another **year**.
+8. B is the octal number of bugfixes of the project, reset to zero if the next release is in another **month**.
 
 # Specification
 
