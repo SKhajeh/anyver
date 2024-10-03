@@ -66,9 +66,9 @@ Given a version number A.YYYYMM.KK9F9P9B:
 7. P is the octal number of performance upgrades in the project. Reset to zero if the next release is in another **year**.
 8. B is the octal number of bugfixes of the project. Reset to zero if the next release is in another **month**.     
 **quick example**:    
-`0.202403.19090917` is the version number for a project which is in the first first year of development. This release has happened in March,2024. It has had one Kaikaku-Kakushin, 0 performance upgrades and functional modifications and 15(0o17=15, in the last month) bugfixes until this release.
+`0.202403.19090917` is the version number for a project in its first year of development(A=0). This release has happened in March,2024. It has had one Kaikaku-Kakushin, 0 performance upgrades and functional modifications and 15(0o17=15, in the last month) bugfixes until this release.
 # Specification
-
+The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 
 # Examples
 Some examples...
