@@ -4,7 +4,7 @@ AnyVer tries to introduce a better versioning system for the products with tempo
 As this specification is the rightful place of using the terminology of the Lean methodology, its a good idea to unofficially call it `LeanVer`, but since "AnyVer" assumes the top place in lexicographical sortings and is a cool name as well, it is wiser to keep with it as the official naming. Anyway we all know that Lean is Anywhere.
 
 Additionally:
-- It is written **AnyVer** Because it can encapsulate any **glance necessary information** about iterations of a project in a compatible way with the building and integration tools.
+- It is written **AnyVer** Because it encapsulates any **glance necessary information** about iterations of a project in a compatible way with the building and integration tools.
 
 - It is read **AnyWhere** Because its applicable any where, from versioning the code components of software projects to the mechanical components in a space rocket project, any thing intended to be assembled or integrated somewhere.
 # Introduction
@@ -25,26 +25,30 @@ Thats why its necessary to narrow down the definition of compatibility into smal
 Due to the verstile and comprehensive concepts found in the Lean methodology, AnyVer adopts and brings some of this terminology into the subject of software versioning.
 During the course of life of a software project, there may occur two types of changes, some of which bring backward incompatiblity with them:
 1. **Evolutionary Changes**:
-Being called Kaizen in the Lean methodology, these small enhancements may have no external cause, and occur solely due to the continuous fine processing of the product by the staff. Or it might be a response by a downstream product team to such evolutionary changes of the upstream products. But the second practice is avoidable on its own if these small changes bring costly incompatiblity. Because no matter how tiny it is, introducing incompatibitily in the favor of small enhancements absorbed from the upstream products, might be expensive and cost ineffective for a product and its downstream users.
+Being called `Kaizen` in the Lean methodology, these small enhancements may have no external cause, and occur solely due to the continuous fine processing of the product by the staff. Or it might be a response by a downstream product team to such evolutionary changes of the upstream products. But the second practice is avoidable on its own if these small changes bring costly incompatiblity. Because no matter how tiny it is, introducing incompatibitily in the favor of small enhancements absorbed from the upstream products, might be expensive and cost ineffective for a product and its downstream users.
 There are atleast 3 types of Kaizen:
    - Bugfixes
    - Performance upgrades
-   - Functional upgrades
+   - Functional modifications
 
    Incompatibility introduced by these kind of changes, is usually promptly addressable by adding or removing some lines of code here and there. Or even if it requires a lot of code refactor, it still doesn't affect the architecture of the software. And the codes schematic diagrams(like UML, StateFlow...) nearly remain the same before and after resolution of the change waves.
 Finally making such decisions is all about competition, teams may rather to mirror a bunch of small changes of the upstream products as its side-effect enhancements during a bigger Revolutionary change.
 2. **Revolutionary Changes**:
 Not every radical change is a revolutionary one, but every revolutionary change brings radical refactors with it.
-At the Upstream it can be a revolution in Quantum Mechanics leading to revolutions in the propellants downstream in the space rocket industry. A revolution in CPU or GPU architectures, leading to drastic changes in the instruction sets consequently some revolutionary features go to bubble up in the programming languages which will render some of the old libraries obsolete ending up as major sudden changes in the software codes. Or even a revolution in Python Steering Council may cause an upheaval in the Pythons PEPs and major revolutionary changes in projects relying on it.
+A revolution in Quantum Mechanics Upstream can lead to revolutions in the propellants, downstream in the space rocket industry. A revolution in CPU or GPU architectures, leading to drastic changes in the instruction sets consequently some revolutionary features go to bubble up in the programming languages which will render some of the old libraries obsolete ending up in major sudden changes of the software codes. Or even a revolution in Python Steering Council may cause an upheaval in the Pythons PEPs and major revolutionary changes in projects relying on it.
 These changes might be welcomed by the affected project maintainers in order to keep up with the technology advances, or it may be a forceful decision because the upstream providers may opt to desert support of the old stuff, or even its a response to the recent market expectations because of the emergence of new competitors with great ideas.
+Lean defines 2 types of revolutionary changes:
+   - **Kaikaku**, meaning the radical movements which totally change the view of the current situation. In software programming, introduction of asynchronous functions in Python (in a competition with NodeJS's asynchronous constructs) is an example. And it gradually moved down in the supply chain afterwards when the people developing Python API's (e.g. for the online exchanges), at some point deserted the old synchronous style and adopted this new upstream fed feature. New decisions made in Python Steering Council for removal of GIL is another example of this type of revolutional changes.
+   - **Kakushin**, meaning the extreme turns which fundamentally transform the current situation. There are lots of once busy now abandoned production lines, just because at some point a new generation of technology emerged out and they couldn't keep up with it, and consequently lost the game because of their poor performance. Like what happened to the Nokia brand. Introduction of new processor technologies bringing more advanced features in programming languages is an example of kakushin in the filed of software programming.
+
 **`Glance necessary information`**:     
 One may look on the version of a products iteration in order to know:
 1. When was its first release?
-2. When was its latest release"
+2. When was it last released"
 3. How old is it?
 4. How mature is it, or how many revolutions has it experienced?
 5. In the latest year of development:
-   - How many functional upgrades has it had?
+   - How many functional modifications has it had?
    - How many performance upgrades has it had?
    - How many Bugfix patches has it had?
    - etc.
