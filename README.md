@@ -21,17 +21,17 @@ But such a situation is very rare. Even a small change in a single line of a pie
 Relying on this definition, for iteration of the "major" part can lead to rapidly growing meaningless version numbers.    
 Thats why its necessary to narrow down the definition of compatibility into smaller classes that bind the number bumping triggers to some more meaningful events.
 
-**`Kaizen, Kaikaku, Kakushin:`**:
+**`LeanVer:`**:
 Due to the verstile and comprehensive concepts found in the Lean methodology, AnyVer adopts and brings some of this terminology into the subject of software versioning.
 During the course of life of a software project, there may occur two types of changes, some of which bring backward incompatiblity with them:
 1. **Evolutionary Changes**:
-Being called `Kaizen` in the Lean methodology, these small enhancements may have no external cause, and occur solely due to the continuous fine processing of the product by the staff. Or it might be a response by a downstream product team to such evolutionary changes of the upstream products. But the second practice is avoidable on its own if these small changes bring costly incompatiblity. Because no matter how tiny it is, introducing incompatibitily in the favor of small enhancements absorbed from the upstream products, might be expensive and cost ineffective for a product and its downstream users.
+Being called **`Kaizen`** in the Lean methodology, these small enhancements may have no external cause, and occur solely due to the continuous fine processing of the product by the staff. Or it might be a response by a downstream product team to such evolutionary changes of the upstream products. But the second practice is avoidable on its own if these small changes bring costly incompatiblity. Because no matter how tiny it is, introducing incompatibitily in the favor of small enhancements absorbed from the upstream products, might be expensive and cost ineffective for a product and its downstream users.
 There are atleast 3 types of Kaizen:
    - Bugfixes
    - Performance upgrades
    - Functional modifications
 
-   Incompatibility introduced by these kind of changes, is usually promptly addressable by adding or removing some lines of code here and there. Or even if it requires a lot of code refactor, it still doesn't affect the architecture of the software. And the codes schematic diagrams(like UML, StateFlow...) nearly remain the same before and after resolution of the change waves.
+   Incompatibility introduced by these kinds of change, is usually promptly addressable by adding or removing some lines of code here and there. Or even if it requires a lot of code refactor, it still doesn't affect the architecture of the software. And the codes schematic diagrams(like UML, StateFlow...) nearly remain the same before and after resolution of the change waves.
 Finally making such decisions is all about competition, teams may rather to mirror a bunch of small changes of the upstream products as its side-effect enhancements during a bigger Revolutionary change.
 2. **Revolutionary Changes**:
 Not every radical change is a revolutionary one, but every revolutionary change brings radical refactors with it.
@@ -53,9 +53,22 @@ One may look on the version of a products iteration in order to know:
    - How many Bugfix patches has it had?
    - etc.
 6. Is it in pre-release or post-release phase?
-7. And optionally, what is 
-# Details
-Full details
+---
+Now its the time to mix things and make some cool stuff out of the above ideas.
+# Summary
+Given a version number A.YYYYMM.KK9F9P9B:
+1. A determines age of the project, started from 0 and incremented annualy.
+2. YYYY is the gregorian year of the last release of the project.
+3. MM is the gregorian month of the last release of the project.
+4. KK is Kakushin-Kaikaku number. started from 0 and incremented every time a revolutionary change happens in the project.
+5. The three nines are used as separator.
+6. F is the octal number of functional modifications in the project, reset to zero **year**ly.
+7. P is the octal number of performance upgrades in the project, reset to zero **year**ly.
+8. B is the octal number of bugfixes of the project, reset to zero**month**ly.
+
+# Specification
+
+
 # Examples
 Some examples...
 If you have 
