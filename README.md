@@ -1,7 +1,7 @@
 # AnyVer
-AnyVer tries to introduce a better versioning system for the products with temporal progressive natures.
+Anyhow Versioning tries to introduce a better versioning system for the products with temporal progressive natures.
 # Preface
-As this specification is the rightful place of using the terminology of the Lean methodology, its a good idea to unofficially call it `LeanVer`, but since "AnyVer" assumes the top place in lexicographical sortings and is a cool name as well, it is wiser to keep with it as the official naming. Anyway we all know that Lean is Anywhere.
+As this specification is the rightful place of using the terminology of the Lean methodology, its a good idea to unofficially call it `LeanVer`, but since "AnyVer" assumes the top place in lexicographical sortings and is a cool name as well, it is wiser to keep up with it as the official naming. Anyway we all know that Lean is Anywhere.
 
 Additionally:
 - It is written **AnyVer** Because it encapsulates any **glance necessary information** about iterations of a project in a compatible way with the building and integration tools.
@@ -25,13 +25,13 @@ Thats why its necessary to narrow down the definition of compatibility into smal
 Due to the verstile and comprehensive concepts found in the Lean methodology, AnyVer adopts and brings some of this terminology into the subject of software versioning.
 During the course of life of a software project, there may occur two types of changes, some of which bring backward incompatiblity with them:
 1. **Evolutionary Changes**:
-Being called **`Kaizen`** in the Lean methodology, these small enhancements may have no external cause, and occur solely due to the continuous fine processing of the product by the staff. Or it might be a response by a downstream product team to such evolutionary changes of the upstream products. But the second practice is avoidable on its own if these small changes bring costly incompatiblity. Because no matter how tiny it is, introducing incompatibitily in the favor of small enhancements absorbed from the upstream products, might be expensive and cost ineffective for a product and its downstream users.
+Being called **`Kaizen`** in the Lean methodology, these small enhancements may have no external reason, and occur solely due to the continuous fine processing of the product by the staff. Or it might be a response by a downstream product team to such evolutionary changes of the upstream products. But the second practice is avoidable on its own if these small changes bring costly incompatiblity. Because no matter how tiny it is, introducing incompatibitily in the favor of small enhancements absorbed from the upstream products, might be expensive and cost ineffective for a product and its downstream users.
 There are atleast 3 types of Kaizen:
-   - Bugfixes
-   - Performance upgrades
-   - Functional modifications
+   - Bugfixes: Any changes related to correcting the unintended behaviours.
+   - Performance upgrades: Manipulations that enhances performance of the product.
+   - Functional modifications: When a feature is deprecated in favor of another newly introduced one.
 
-   Incompatibility introduced by these kinds of change, is usually promptly addressable by adding or removing some lines of code here and there. Or even if it requires a lot of code refactor, it still doesn't affect the architecture of the software. And the codes schematic diagrams(like UML, StateFlow...) nearly remain the same before and after resolution of the change waves.
+   Incompatibility introduced by these kinds of change, is usually promptly addressable by adding or removing some lines of code here and there. Or even if it requires a lot of code refactor, it still doesn't affect the architecture of the software. And the codes schematic diagrams(like UML, StateFlow...) don't experience a global variation when compared before and after carrying out of the commits. Thus AnyVer categorizes these class of changes(B,P&F) as the **`backward non-destructive`** meaning if it is going to cause some refactoring downstream, it will be in a non-destructive way to the overall architecture of its dependant products.
 Finally making such decisions is all about competition, teams may rather to mirror a bunch of small changes of the upstream products as its side-effect enhancements during a bigger Revolutionary change.
 2. **Revolutionary Changes**:
 Not every radical change is a revolutionary one, but every revolutionary change brings radical refactors with it.
@@ -41,6 +41,10 @@ Lean defines 2 types of revolutionary changes:
    - **Kaikaku**, meaning the radical movements which totally change the view of the current situation. In software programming, introduction of asynchronous functions in Python (in a competition with NodeJS's asynchronous constructs) is an example. And it gradually moved down in the supply chain afterwards when the people developing Python API's (e.g. for the online exchanges), at some point deserted the old synchronous style and adopted this new upstream fed feature. New decisions made in Python Steering Council for removal of GIL is another example of this type of revolutional changes.
    - **Kakushin**, meaning the extreme turns which fundamentally transform the current situation. There are lots of once busy now abandoned production lines, just because at some point a new generation of technology emerged out and they couldn't keep up with it, and consequently lost the game because of their poor performance. Like what happened to the Nokia brand. Introduction of new processor technologies bringing more advanced features in programming languages is an example of kakushin in the filed of software programming.
 
+   In fact Kaikaku might be an intentinally delayed or unintentionally missed part of a previous Kakushin which has eventually paved its way into the product through the force of the market or insightfulness of a team member. AnyVer distincts between the Kaikaku and Kakushin changes while both are categorized in the class **`revolutionary changes`**.
+
+**`API`**:
+AnyVer requires a public API to be preciseley defined for the product, to enable the users to track 
 **`Glance necessary information`**:     
 One may look on the version of a products iteration in order to know:
 1. When was its first release?
@@ -56,23 +60,25 @@ One may look on the version of a products iteration in order to know:
 ---
 Now its the time to mix things up and make some cool stuff out of the above ideas.
 # Summary
-Given a version number A.YYYYMM.KK9F9P9B:
+Given a version number A.KnYYYYMMKu.F9P9B:
 1. A determines age of the project, started from 0 and incremented annualy.
-2. YYYY is the Gregorian year of the last release of the project.
-3. MM is the Gregorian month of the last release of the project.
-4. KK is Kakushin-Kaikaku number. started from 0 and incremented every time a revolutionary change happens in the project(never reset).
-5. The three nines are used as separator.
+2. Kn is the Kakushin number. started from 1 and incremented every time a Kakushin occures.(never reset)
+3. YYYY is the Gregorian year of the last release of the project.
+4. MM is the Gregorian month of the last release of the project.(Its zero padded upto 2 digits)
+5. Ku is Kaikaku number. started from 0 and incremented every time a Kaikaku occures.(never reset)
 6. F is the octal number of functional modifications in the project. Reset to zero if the next release is in another **year**.
 7. P is the octal number of performance upgrades in the project. Reset to zero if the next release is in another **year**.
-8. B is the octal number of bugfixes of the project. Reset to zero if the next release is in another **month**.     
+8. B is the octal number of bugfixes of the project. Reset to zero if the next release is in another **month**.
+9. 9 numbers are used as separator.
 **quick example**:    
-`0.202403.19090917` is the version number for a project in its first year of development(A=0). This release has happened in March,2024. It has had one Kaikaku-Kakushin, 0 performance upgrades and functional modifications and 15(0o17=15, in the last month) bugfixes until this release.
+`0.12024030.19090917` is the version number for a project in its first year of development(A=0). This release has happened in March,2024. It has had one Kaikaku-Kakushin, 0 performance upgrades and functional modifications and 15(0o17=15) bugfixes in or until the last month and this release. If in the 4th month of the upcomming year, another release of this project with 4 bugfixes and 10 functional modifications and 3 performance upgrades gets published, the new release version will be, `1.202504.19129394`
 # Specification
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 
+
 # Examples
 Some examples...
-If you have 
+If you have ...
 # Used By
 ...
 # Attributes
