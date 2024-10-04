@@ -60,7 +60,7 @@ One may look on the version of a products iteration in order to know:
 ---
 Now its the time to mix things up and make some cool stuff out of the above ideas.
 # Summary
-Given a version number A.KnYYYYMMKu.F9P9B:
+Given a version number A.KnYYYYMM.Ku9F9P9B:
 1. A determines age of the project, started from 0 and incremented annualy.
 2. Kn is the Kakushin number. started from 1 and incremented every time a Kakushin occures.(never reset)
 3. YYYY is the Gregorian year of the last release of the project.
@@ -71,7 +71,7 @@ Given a version number A.KnYYYYMMKu.F9P9B:
 8. B is the octal number of bugfixes of the project. Reset to zero if the next release is in another **month**.
 9. 9 numbers are used as separator.
 **quick example**:    
-`0.12024030.19090917` is the version number for a project in its first year of development(A=0). This release has happened in March,2024. It has had one Kaikaku-Kakushin, 0 performance upgrades and functional modifications and 15(0o17=15) bugfixes in or until the last month and this release. If in the 4th month of the upcomming year, another release of this project with 4 bugfixes and 10 functional modifications and 3 performance upgrades gets published, the new release version will be, `1.202504.19129394`
+`0.1202403.19090917` is the version number for a project in its first year of development(A=0) in its first Kakushin(Kn=1) This release has happened in March,2024. It has had a Kaikaku(Ku=1), 0 functional modifications and performance upgrades(F=P=0) and 15(B=0o17=15) bugfixes in or until the last month and this release. If in the 4th month of the upcomming year, another release of this project with 4 bugfixes and 10 functional modifications and 3 performance upgrades gets published, the new release version will be, `1.202504.19129394`
 # Specification
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 
