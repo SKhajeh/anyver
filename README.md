@@ -4,7 +4,7 @@ Anyhow Versioning tries to introduce a better versioning system for the products
 As this specification is the rightful place of using the terminology of the Lean methodology, its a good idea to unofficially call it `LeanVer`, but since "AnyVer" assumes the top place in lexicographical sortings and is a cool name as well, it is wiser to keep up with it as the official naming. Anyway we all know that Lean is Anywhere.
 
 Additionally:
-- It is written **AnyVer** Because it encapsulates any [**glance necessary information**](gni) about iterations of a project in a compatible way with the building and integration tools.
+- It is written **AnyVer** Because it encapsulates any [**glance necessary information**](#gni) about iterations of a project in a compatible way with the building and integration tools.
 
 - It is read **AnyWhere** Because its applicable any where, from versioning the code components of software projects to the mechanical components in a space rocket project, any thing intended to be assembled or integrated somewhere.
 
@@ -61,7 +61,7 @@ In AnyVer terms, if the devlopment of a new release of a product has just starte
 As discussed earlier, the Kaizen steps don't guarantee full backward-compatibility of the product. They are merely backward-nondestructive. So for a product to achieve full backward-compatibility of its stable release iterations(Kaizen increments), it has to provide a compatibility layer in each release for the downstream products. Kaizen steps on every constant Kaikaku or Kakushin number imply that the product has small non-destructive variations.
 
 **`Pre-release and Post-release`**:
-Post-release event is an iteration of products just after the final release, which only contain harmless modifications like corrections documentations etc. AnyVer covers the Post-release as a Kaizen event[(F,P,B)](FPB), and the Pre-release is treated just like in the SemVer Specification. Except for the case of the separator symbol(- in SemVer) for which AnyVer leaves the decision about, based on the implementation situation for the users of the specification. But it must be either "-" or ".". If "." is chosen, then use of "-" is prohibited in the pre-release segment.
+Post-release event is an iteration of products just after the final release, which only contain harmless modifications like corrections documentations etc. AnyVer covers the Post-release as a Kaizen event[(F,P,B)](#FPB), and the Pre-release is treated just like in the SemVer Specification. Except for the case of the separator symbol(- in SemVer) for which AnyVer leaves the decision about, based on the implementation situation for the users of the specification. But it must be either "-" or ".". If "." is chosen, then use of "-" is prohibited in the pre-release segment.
 
 **`Build Information`**: 
 AnyVer Allows usage of "+" or "." at the end of version number in order to add some information about the build number or local numberings which will be at first place used as an internal informational measure, like that of [Python local numbering](https://packaging.python.org/en/latest/specifications/version-specifiers/#local-version-identifiers) or [SemVers build information](https://semver.org/#spec-item-10).
